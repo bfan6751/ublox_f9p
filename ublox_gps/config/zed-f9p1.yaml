@@ -1,14 +1,15 @@
 # Configuration Settings for ZED-F9P device
+# Rover receiver
 
 debug: 1                 # Range 0-4 (0 means no debug statements will print)
 
-device: /dev/ttyACM1
+device: /dev/ttyACM0
 frame_id: gps1
 
 uart1:
-  baudrate: 115200
-  in: 3
-  out: 3
+  baudrate: 460800
+  in: 35    # Input UBX, NMEA, and RTCM3
+  out: 1    # Output UBX
 
 # Enable u-blox message publishers
 publish:
@@ -16,6 +17,6 @@ publish:
   nav:
     all: true
     relposned: true
-    posllh: true
-    posecef: true
+    posllh: false
+    posecef: false
 

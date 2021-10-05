@@ -3,11 +3,13 @@
 
 debug: 1                 # Range 0-4 (0 means no debug statements will print)
 
-device: /dev/ttyACM0
+# device: /dev/ttyACM0
+device: /dev/ttymod_rtk2b
 frame_id: gps1
 
 uart1:
-  baudrate: 460800
+  # baudrate: 460800
+  baudrate: 921600
   in: 35    # Input UBX, NMEA, and RTCM3
   out: 1    # Output UBX
 

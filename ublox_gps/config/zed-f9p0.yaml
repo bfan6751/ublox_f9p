@@ -4,11 +4,13 @@
 
 debug: 1                 # Range 0-4 (0 means no debug statements will print)
 
-device: /dev/ttyUSB0
+# device: /dev/ttyUSB1
+device: /dev/ttymod_rtk2blite
 frame_id: gps0
 
 uart1:
-  baudrate: 460800
+  # baudrate: 460800
+  baudrate: 921600
   in: 35    # Input UBX, NMEA, and RTCM3
   out: 1    # Output UBX
 
@@ -21,4 +23,3 @@ publish:
     relposned: true
     posllh: false
     posecef: false
-
